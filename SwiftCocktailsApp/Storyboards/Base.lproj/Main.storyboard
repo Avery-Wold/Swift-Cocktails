@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H61-Iu-hdy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SUa-jI-yMp">
+            <objects>
+                <navigationController id="H61-Iu-hdy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wy2-gR-epu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fAX-65-IcA" kind="relationship" relationship="rootViewController" id="Oph-TP-8aF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVT-ey-vFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="116"/>
+        </scene>
+        <!--Avery's Swift Cocktail App-->
+        <scene sceneID="4yL-co-jh9">
+            <objects>
+                <viewController id="fAX-65-IcA" customClass="MainViewController" customModule="SwiftCocktailsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IV8-Zq-c7a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg9-nt-pR5">
+                                <rect key="frame" x="16" y="87" width="343" height="83"/>
+                                <string key="text">Mixology is popular!  Use this app to type in the name of a cocktail or spirit to learn how to make drinks!  If you hate decisions you can also just press random!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Cocktail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ol5-NE-vuX">
+                                <rect key="frame" x="16" y="211" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6q8-3M-paw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Spirit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FD9-c9-yVQ">
+                                <rect key="frame" x="16" y="249" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bDL-2U-ewX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ml-Vh-yau">
+                                <rect key="frame" x="259" y="211" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zoE-bk-7Gt"/>
+                                </constraints>
+                                <state key="normal" title="Make It!"/>
+                                <connections>
+                                    <action selector="btnCocktail:" destination="fAX-65-IcA" eventType="touchUpInside" id="IDm-So-ssb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXT-WS-eDs">
+                                <rect key="frame" x="259" y="249" width="100" height="30"/>
+                                <state key="normal" title="Find it!"/>
+                                <connections>
+                                    <action selector="btnSpirit:" destination="fAX-65-IcA" eventType="touchUpInside" id="gtP-Ud-nd0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-bE-17g">
+                                <rect key="frame" x="137" y="318" width="100" height="30"/>
+                                <state key="normal" title="Get Random"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FD9-c9-yVQ" firstAttribute="top" secondItem="ol5-NE-vuX" secondAttribute="bottom" constant="8" symbolic="YES" id="9Ol-WD-XCS"/>
+                            <constraint firstItem="Pyb-bE-17g" firstAttribute="top" secondItem="FD9-c9-yVQ" secondAttribute="bottom" constant="39" id="Eg2-ar-GB6"/>
+                            <constraint firstItem="gUs-4k-XKI" firstAttribute="bottom" secondItem="vXT-WS-eDs" secondAttribute="bottom" constant="388" id="Li5-m2-3To"/>
+                            <constraint firstItem="0ml-Vh-yau" firstAttribute="trailing" secondItem="vXT-WS-eDs" secondAttribute="trailing" id="PRA-i7-Wb4"/>
+                            <constraint firstItem="Pyb-bE-17g" firstAttribute="leading" secondItem="gUs-4k-XKI" secondAttribute="leading" constant="137" id="Rnx-Y2-sYB"/>
+                            <constraint firstItem="0ml-Vh-yau" firstAttribute="trailing" secondItem="Hg9-nt-pR5" secondAttribute="trailing" id="aeb-Gb-4Ff"/>
+                            <constraint firstItem="Hg9-nt-pR5" firstAttribute="leading" secondItem="gUs-4k-XKI" secondAttribute="leading" constant="16" id="atC-cT-n7Z"/>
+                            <constraint firstItem="0ml-Vh-yau" firstAttribute="leading" secondItem="ol5-NE-vuX" secondAttribute="trailing" constant="93" id="b5h-VN-A8b"/>
+                            <constraint firstItem="FD9-c9-yVQ" firstAttribute="bottom" secondItem="vXT-WS-eDs" secondAttribute="bottom" id="e1v-WR-6sD"/>
+                            <constraint firstItem="gUs-4k-XKI" firstAttribute="trailing" secondItem="Hg9-nt-pR5" secondAttribute="trailing" constant="16" id="ebg-fg-ymJ"/>
+                            <constraint firstItem="ol5-NE-vuX" firstAttribute="leading" secondItem="FD9-c9-yVQ" secondAttribute="leading" id="epm-dd-wKd"/>
+                            <constraint firstItem="0ml-Vh-yau" firstAttribute="leading" secondItem="vXT-WS-eDs" secondAttribute="leading" id="gJN-Qy-gZE"/>
+                            <constraint firstItem="Hg9-nt-pR5" firstAttribute="top" secondItem="gUs-4k-XKI" secondAttribute="top" constant="23" id="jyC-II-bw5"/>
+                            <constraint firstItem="ol5-NE-vuX" firstAttribute="top" secondItem="0ml-Vh-yau" secondAttribute="top" id="kQg-Na-aI2"/>
+                            <constraint firstItem="gUs-4k-XKI" firstAttribute="trailing" secondItem="Pyb-bE-17g" secondAttribute="trailing" constant="138" id="na8-09-not"/>
+                            <constraint firstItem="ol5-NE-vuX" firstAttribute="leading" secondItem="Hg9-nt-pR5" secondAttribute="leading" id="nit-Qs-h5o"/>
+                            <constraint firstItem="ol5-NE-vuX" firstAttribute="trailing" secondItem="FD9-c9-yVQ" secondAttribute="trailing" id="qxa-89-rik"/>
+                            <constraint firstItem="ol5-NE-vuX" firstAttribute="top" secondItem="Hg9-nt-pR5" secondAttribute="bottom" constant="41" id="wtl-1q-V62"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gUs-4k-XKI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Avery's Swift Cocktail App" id="ZJQ-ci-Gr2"/>
+                    <connections>
+                        <outlet property="txtCocktail" destination="ol5-NE-vuX" id="IqC-vu-amP"/>
+                        <outlet property="txtSpirit" destination="FD9-c9-yVQ" id="XaG-az-R3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qq9-YU-hOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
